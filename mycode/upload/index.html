@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>upload上传文件</title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">  
+		//显示缩略图
+		$(document).ready(function(){
+			$("#file").bind("change",function(){
+				//console.log($(this));jquery格式
+				//console.log(this);js格式
+				for(var i = 0, f; f = this.files[i], i < this.files.length; i++){
+					console.log(f.size);
+					$("div").append('<li class="instaged"><p class="title">'+ f.name +'</p></li>');
+					if( f.size <= 102400 ){
+						if(window.FileReader) {  
+							var fr = new FileReader();  
+							fr.onload = function(e){ 	
+									console.log(e);
+									$("li").append('<p class="imgwrap"><img class="thumb" src="'+ e.target.result +'" width="100px" height="100px"  /></p>');
+								}
+							fr.readAsDataURL(f);  
+						} 
+					}else{
+						$("li").eq(i).append('<p class="imgwrap">图片暂不可预览</p>');
+					}
+				}	
+			});
+		});
+	</script> 
+	<style type="text/css"> 
+	.li {
+		list-style-type:none;
+		width:150px;
+		height:200px;
+	}
+	</style>
+</head>
+<body>
+	<!--<input type="file" name="file" multiple="multiple" onchange="showPreview(this)" accept="image/*" />  -->
+	<input id="file" type="file" name="file" multiple="multiple" accept="image/*" />  
+	<div></div>
+</body>
+</html>
