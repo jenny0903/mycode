@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="qrcode.js" type="text/javascript"></script>
+    <script src="jquery.qrcode.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#bt").bind("click", function () {
+                text = $("#text").val();
+                //$("#div_div").qrcode(utf16to8(text));
+				
+				$("#div_div").qrcode({     
+				  render: "table", //table方式      
+				  width: 100, //宽度      
+				  height:100, //高度      
+				  text: utf16to8(text) //任意内容 
+				});
+				
+			})
+        })
+        function utf16to8(str) { //转码
+            var out, i, len, c;
+            out = "";
+            len = str.length;
+            for (i = 0; i < len; i++) {
+                c = str.charCodeAt(i);
+                if ((c >= 0x0001) && (c <= 0x007F)) {
+                    out += str.charAt(i);
+                } else if (c > 0x07FF) {
+                    out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                    out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                    out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                } else {
+                    out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                    out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                }
+            }
+            return out;
+        }  
+    </script>
+</head>
+<body>
+<input type="text" id="text" />
+<input type="button" value="转码" id="bt" />
+<div id="div_div" style="width:400px;height:400px;border:1px solid #000;"></div>
+</body>
+</html>
