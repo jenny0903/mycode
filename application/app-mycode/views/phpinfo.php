@@ -1,6 +1,6 @@
 <?php
 //查看php版本
-// echo phpinfo();
+echo phpinfo();
 
 //时间格式2014-01-27T14:15:33Z
 // $date = date('Y-m-d H:i:s',time());
