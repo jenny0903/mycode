@@ -8,11 +8,12 @@
 
 
 <body>
-<button class="button blue">Button Tag</button>
+<!--   <button class="button blue">Button Tag</button>  -->
 <div class="container">
     <div class="login_bar">
         <a class="btn small_btn blue_btn register" href="javascript:void(0)" >注册</a>
         <a class="btn small_btn blue_btn login" href="javascript:void(0)" >登录</a>
+        <div class>
     </div>
 </div>
 </body>

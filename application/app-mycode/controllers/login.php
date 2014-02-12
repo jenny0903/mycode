@@ -20,7 +20,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		// $this->load->view('css3_3d_rotate');
-		$this->load->view('candy_button');
+		$this->load->view('login');
 	}
 }
 
