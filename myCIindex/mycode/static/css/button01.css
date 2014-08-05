@@ -116,3 +116,93 @@ a{
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
+
+.mod_reg_form {
+    background-color: #FAFAFA;
+    border: 1px solid #D3D3D3;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: #707070;
+    font-size: 12px;
+    padding: 12px 15px 18px;
+    position: absolute;
+    right: 29px;
+    top: 40px;
+    width: 231px;
+    z-index: 10;
+}
+.mod_reg_form h2 {
+    color: #363636;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 7px;
+}
+.mod_reg_form a {
+    color: #55A1D2;
+    display: inline-block;
+    text-decoration: underline;
+}
+.mod_reg_form a:hover {
+    text-decoration: none;
+}
+.mod_reg_form p {
+    color: #707070;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.mod_reg_form .fr {
+    display: inline;
+    float: right;
+}
+.mod_reg_form .btn {
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    width: 100%;
+}
+.mod_reg_form .btn_m {
+    font-size: 16px;
+    height: 34px;
+    line-height: 34px;
+}
+.mod_reg_form .mb10 {
+    margin-bottom: 10px;
+}
+.mod_reg_form .divider {
+    background-color: #E8E7E7;
+    border-bottom: 1px solid #FFFFFF;
+    font-size: 0;
+    height: 1px;
+    margin: 10px -15px;
+    overflow: hidden;
+    padding: 0;
+}
+.mod_reg_form .input_agree {
+    float: left;
+    margin: 1px 5px 0 0;
+}
+.mod_reg_form .m_agree {
+    margin-bottom: 12px;
+}
+.mod_reg_form .btn_color_blue_disabled, .mod_reg_form .btn_color_blue_disabled:hover, .mod_reg_form .btn_color_blue_disabled:active {
+    background-color: #6AB9DD;
+    background-image: linear-gradient(to bottom, #6AB9DD, #4E99CE);
+    background-repeat: repeat-x;
+    border-color: #2C9CCB #2286B2 #176C97;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: #A6E1FB;
+    cursor: default;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
